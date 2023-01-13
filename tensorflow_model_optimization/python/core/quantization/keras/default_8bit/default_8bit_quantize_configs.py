@@ -39,7 +39,7 @@ class Default8BitOutputQuantizeConfig(quantize_config.QuantizeConfig):
   def get_output_quantizers(self, layer):
     if self.quantize_output:
       return [quantizers.MovingAverageQuantizer(
-          num_bits=8, per_axis=False, symmetric=True, narrow_range=False)]
+          num_bits=4, per_axis=False, symmetric=True, narrow_range=False)]
     return []
 
   def get_config(self):
